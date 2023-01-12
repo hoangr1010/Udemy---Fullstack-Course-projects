@@ -1,0 +1,21 @@
+/* body */
+
+main {
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    top: 200px
+}
+
+.title {
+    font-size: 100px;
+}
+
+.number {
+    font-size: 200px
+}
+
+.btn {
+    margin: auto 10px auto 10px;
+    width: 10%
+}
