@@ -1,0 +1,47 @@
+/* nav bar */
+.navbar {
+    box-shadow: 0 2px 4px 0 rgba(79, 63, 63, 0.2);
+}
+
+.nav-link {
+    padding-top: auto;
+    padding-bottom:0;
+    font-family: 'Roboto Mono', monospace;
+    color: black
+}
+
+.navbar-brand {
+    font-size: 25px;
+}
+
+/* body */
+
+.container {
+    margin: auto;
+    width: 500px;
+    position: relative;
+    top: 20%
+  
+}
+
+.container > h2 {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 25px;
+
+}
+
+main {
+    text-align: center;
+    height: 100vh;
+    background-color: #35688f;
+}
+
+span {
+    color: #35688f
+}
+
+
