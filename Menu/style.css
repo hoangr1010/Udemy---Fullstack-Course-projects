@@ -1,0 +1,62 @@
+/* header */
+
+.header {
+    text-align: center;
+    letter-spacing: 7px;
+    padding: 50px 1px 50px ;
+
+}
+
+.underline-title {
+    width: 30%;
+    border-top: 10px solid skyblue;
+    border-radius: 20px;
+}
+
+/* body */
+
+.menu-body {
+    padding-top: 30px;
+    max-width: fit-content;
+    width: 70%;
+}
+
+.block-element {
+    padding: 0px 30px 20px;
+}
+
+.underline-element {
+    border-top: dashed 3px skyblue;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+img {
+    max-width:300px;
+    max-height:140px;
+    width: auto;
+    height: auto;
+    border: 3px solid rgb(56, 131, 188);
+    border-radius: 4px;
+
+}
+
+.food-name{
+    display: inline-block;
+    font-size: 120%;
+    color:rgb(32, 122, 187)
+}
+
+.price {
+    display: inline-block;
+    font-size: 90%;
+    position: absolute;
+    top: 5px;
+    right:20px
+}
+
+p {
+    font-size: 17px;
+    color:rgb(126, 114, 114)
+}
+
