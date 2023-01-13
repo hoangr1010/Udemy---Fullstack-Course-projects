@@ -1,0 +1,57 @@
+/* toggle button */
+.sidebar-toggle {
+    position: absolute;
+    top: 5%;
+    right: 5%
+}
+
+/* sidebar */
+
+aside {
+    width:20%;
+    height: 100vh;
+    position: fixed;
+    background-color:rgb(181, 245, 243);
+    transition: 0.5s;
+    transform: translate(-100%);
+}
+
+ul {
+    padding: 0
+}
+
+.nav-link {
+    transition: 0.5s;
+    color: black
+}
+
+.nav-link:hover {
+    background-color: rgb(158, 235, 235);
+    color:rgb(0, 53, 243);
+    padding-left: 10%;
+}
+
+.navbar-brand {
+    font-size: 200%;
+    padding-left: 16px;
+    margin-top: 15px;
+}
+
+.x-button {
+    position: absolute;
+    margin-top: 13.011px;
+    top: 7px;
+    right: 20px
+
+}
+
+.show-sidebar {
+    transform: translate(0);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1050px) {
+    aside {
+        width: 100%;
+    }
+}
