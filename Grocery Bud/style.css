@@ -1,0 +1,76 @@
+/* form */
+
+body {
+    background-color:lavender
+}
+
+.container {
+    text-align: center;
+    margin-top: 20rem;
+    max-width: 50%;
+    background-color:darkgrey;
+    box-shadow: 10px 10px #888888
+}
+
+.grocery-form {
+    height: 130px
+}
+
+h3 {
+    padding: 20px 10px 10px
+}
+
+input.grocery {
+    width: 80%;
+    border-style: none;
+    border-radius: 5px
+}
+
+p.alert-empty {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(234, 80, 80);
+    color: white;
+}
+
+p.alert-added {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(80, 234, 167);
+    color: rgb(0, 0, 0);
+}
+
+p.alert-deleted {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(216, 160, 48);
+    color: rgb(0, 0, 0);
+}
+/* grocery list */
+
+.grocery-item {
+    text-align: left;
+    padding: 5px 5px 5px;
+    margin: 4px 40px 4px;
+    transition: 0.5s
+}
+
+.grocery-item:hover {
+    background-color:darkgoldenrod;
+    border-radius: 5px
+}
+
+.fa-trash {
+    color: red
+}
+
+.grocery-item {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.delete {
+    border: none;
+    position: absolute;
+    right: 30%
+}
