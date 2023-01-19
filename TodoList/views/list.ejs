@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1><%= today %></h1>
+    </div>
+
+    <div class="box">
+ 
+        <% for (var i=0; i<job.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= job[i] %></p>
+            </div>
+        <% } %>
+
+        <form class="item" action="/" method="post">
+            <input type="text" name="todoList" placeholder="What you do?" autocomplete="off">
+            <button type='submit' name="button">+</button>
+        </form>
+    </div>
+
+    
+
+</body>
+</html>
