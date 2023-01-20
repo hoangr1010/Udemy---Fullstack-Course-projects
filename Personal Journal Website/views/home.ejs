@@ -1,0 +1,12 @@
+<%- include partials/header.ejs %> 
+
+<h1>Home</h1>
+
+<p><%= headingContent %></p>
+
+<% contentList.forEach(function(content) { %>
+    <h1><%= content.title %></h1>
+    <p><%= content.body.slice(0,150) %> ... <a href="/posts/<%= content.title %>">Read more</a></p>
+<% }) %>
+
+<%- include partials/footer.ejs %> 
