@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- css style -->
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
 
     <div class="box" id="heading">
         <h1><%= today %></h1>
     </div>
+    <div class="box name" id="heading">
+        <h2><%= page %></h2>
+    </div>
 
     <div class="box">
- 
-        <% for (var i=0; i<job.length; i++) { %>
-            <div class="item">
-                <input type="checkbox">
-                <p><%= job[i] %></p>
-            </div>
-        <% } %>
+        <form action="/delete" method="POST">
+            <% job.forEach(function(jobItems) { %>
+                <div class="item">
+                    <button type="submit" name="delete" value=<%= jobItems._id %> class="deleteBtn">
+                        <i class="fa fa-times" style="color:rgb(249, 0, 0)"></i>
+                    </button>
+                    <p><%= jobItems.name %></p>
+                </div>
+
+            <% }) %>
+            <input type="hidden" name="page" value=<%= page %>>
+        </form>
 
         <form class="item" action="/" method="post">
             <input type="text" name="todoList" placeholder="What you do?" autocomplete="off">
-            <button type='submit' name="button">+</button>
+            <button class="add" type='submit' name="button" value=<%= page %> >+</button>
         </form>
     </div>
 
