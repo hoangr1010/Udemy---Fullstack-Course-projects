@@ -14,7 +14,7 @@ app.use(express.static('public'))
 // items = []
 // Connect to MongoDB 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/todoDB", { useNewUrlParser: true});
+mongoose.connect("mongodb+srv://hoanglui:powerteam@cluster0.lpi2k1o.mongodb.net/todoDB", { useNewUrlParser: true});
 
 // Create todolist Schema and create new collection
 const todoSchema = new mongoose.Schema({
@@ -116,7 +116,7 @@ app.post('/delete', function(req, res) {
 
 
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('listening on 3000')
 })
 
