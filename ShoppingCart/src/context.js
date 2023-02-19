@@ -37,6 +37,17 @@ const AppProvider = ({ children }) => {
     dispatch({ type: 'sumUp' })
   }, [state])
 
+  async function fetchData() {
+    dispatch({ type: 'loading' })
+    const response = await fetch(url)
+    const cart = await response.json()
+    dispatch({ type: 'display', payload: cart })
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
   <AppContext.Provider value={{
     ...state,

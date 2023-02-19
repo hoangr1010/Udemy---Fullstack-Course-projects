@@ -36,6 +36,10 @@ function reducer(state, action) {
             })
             
             return ({...state, total: total, amount: amount})
+        case ('display'):
+            return {...state, cart: action.payload, loading: false }
+        case ('loading'):
+            return {...state, loading: true}
 
     }
 }
