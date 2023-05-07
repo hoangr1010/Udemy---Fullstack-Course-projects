@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config({ path: './.env' });
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
@@ -10,11 +12,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.set("view engine", "ejs");
 app.use(express.static('public'))
 
-
-// items = []
 // Connect to MongoDB 
-mongoose.set('strictQuery', false);
-mongoose.connect(process.env.DB_KEY, { useNewUrlParser: true});
+DB = process.env.DB.replace('<PASSWORD>', process.env.DB_PASSWORD);
+mongoose
+  .connect(DB, {
+    // just some options to deal with deprecation warnings.
+    useNewUrlParser: true, 
+    useUnifiedTopology: true 
+      })
+  .then((con) => console.log('DB connection successful!'));
 
 // Create todolist Schema and create new collection
 const todoSchema = new mongoose.Schema({
@@ -87,7 +93,7 @@ app.post('/', function(req, res) {
     var currentPage = req.body.button
     var item = req.body.todoList
 
-    if (currentPage === 'root') {
+    if (currentPage === 'Main Page') {
         insertSingle(item)
         res.redirect('/')
     } else {
@@ -101,7 +107,7 @@ app.post('/delete', function(req, res) {
     currentPage = req.body.page
     itemId = req.body.delete
 
-    if (currentPage === 'root') {
+    if (currentPage === 'Main Page') {
         deleteSingle(req.body.delete)
         res.redirect('/')
     } else {
